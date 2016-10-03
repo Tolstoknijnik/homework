@@ -1,0 +1,50 @@
+package com.javarush.test.level03.lesson04.task03;
+
+/* StarCraft
+Дать им 
+Создать 10 зергов, 5 протосов и 12 терран.
+ всем уникальные имена.
+*/
+
+public class Solution
+{
+    public static void main(String[] args)
+    {
+        Zerg[] zerg = new Zerg[10]; //объявляю имя массива и выделяю память
+        for(int i=0; i<10; i++)     //задаю условия цикла для создания 10 объектов
+        {
+            zerg[i] = new Zerg();   //создаю 10 объектов и помещаю их в ячейки пямяти с индексом i
+            zerg[i].name = "z" + i; //занощу значение на каждый объет. По идее должно бять "z1", "z2", "z3"...
+        }
+        
+        Protos[] protos = new Protos[5];
+        for(int i=0; i<5; i++)
+        {
+            protos[i] = new Protos();
+            protos[i].name = "p" + i;
+        }
+        
+        Terran[] terran = new Terran[12];
+        for(int i=0; i<12; i++)
+        {
+            terran[i] = new Terran();
+            terran[i].name = "t" + i;
+        }
+
+    }
+
+    public static class Zerg
+    {
+        public String name;
+    }
+
+    public static class Protos
+    {
+        public String name;
+    }
+
+    public static class Terran
+    {
+        public String name;
+    }
+}
